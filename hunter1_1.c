@@ -16,6 +16,6 @@ for(int i=0;i<n;i++)
   flag=1;
   }
   }
-  if(flag=0)
+  if(flag==0)
     printf("unique");
     }
