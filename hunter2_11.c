@@ -2,6 +2,7 @@
 #include <string.h> 
 void main()
 {
+    int l;
     int i, j = 0, k = 0, x, len;
     char str[100], str1[10][20], temp;
     scanf("%[^\n]s", str); 
