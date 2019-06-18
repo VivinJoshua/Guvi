@@ -1,47 +1,40 @@
 // Roman TO integer
 #include<bits/stdc++.h>
 using namespace std;
-int main()
+int alpha(char x)
 {
-  char input[5];
-  int i=1,res=0,len;
-  cin>>input;
-  len=strlen(input);
-  len-=1;
-  while(input[len])
+  int value;
+  if(x=='I' || x=='i')
+      value=1;
+  else if (x=='V' || x=='v')
+      value=5;
 
+  else if (x=='X' || x=='x')
+      value=10;
+  return value;
+}
+
+int main()
+
+{
+  char x[100];
+  int i=0,result=0;
+
+  do
   {
-      if(input[len]=='v' || input[len]=='V')
-        {
-          if(input[len-1]=='i' || input[len-1]=='I')
-          {
-            res+=4;
-            len-=2;
-          }
-          else
-            {
-              res+=5;
-              len--;
-            }
-        }
-      else if (input[len]=='I' || input[len]=='i')
+  cin>>x;
+result=0,i=0;
+  while(x[i])
+  {
+    if(alpha(x[i]) >= alpha(x[i+1]))
+      result+=alpha(x[i]);
+    else
       {
-        res+=1;
-        len--;
+        result+=(alpha(x[i+1]) - alpha(x[i]));
+        i++;
       }
-      else if(input[len]=='x' || input[len]=='X')
-        {
-          if(input[len-1]=='i' || input[len-1]=='I')
-          {
-            res+=9;
-            len-=2;
-          }
-          else
-            {
-              res+=10;
-              len--;
-            }
-        }
+    i++;
   }
-  cout<<res;
+  cout<<result<<endl;
+}while(x!="q");
 }
