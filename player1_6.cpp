@@ -1,3 +1,4 @@
+//strign isomorphism
 #include<bits/stdc++.h>
 using namespace std;
 #define max_char 256
@@ -29,7 +30,7 @@ int main()
 {
   char a[100],b[100];
   cin>>a>>b;
-  cout<<a<<"\n"<<b<<"\n";
+ // cout<<a<<"\n"<<b<<"\n";
   int x=isomorphism(a,b);
   if(x)
     cout<<"yes";
