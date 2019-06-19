@@ -32,7 +32,7 @@ int main()
   cout<<a<<"\n"<<b<<"\n";
   int x=isomorphism(a,b);
   if(x)
-    cout<<"Yes";
+    cout<<"yes";
   else
-    cout<<"No";
+    cout<<"no";
 }
