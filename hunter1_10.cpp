@@ -25,8 +25,8 @@ int main()
     cin>>arr2[i];
     if(subsequence(n1,n2,arr1,arr2))
       {
-        cout<<"yes";
+        cout<<"YES";
         return 0;
       }
-      cout<<"no";
+      cout<<"NO";
 }
